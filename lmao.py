@@ -24,4 +24,4 @@ print(r"""
 # Get user input for the IP address
 ip = input("\033[92mEnter the IP address: \033[0m")
 fetch_ip_details(ip)
-      
+        
