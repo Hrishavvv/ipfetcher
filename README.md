@@ -13,4 +13,6 @@
 ```chmod +x *```
 
 ```python3 lmao.py``` *OR*
-```lmao.sh```
+```bash lmao.sh```
+
+![Screenshot_2023-12-08-15-01-58-79_84d3000e3f4017145260f7618db1d683](https://github.com/Hrishavvv/ipfetcher/assets/114722342/50326a52-3155-429d-bd42-e15fdcb56508)
