@@ -6,9 +6,13 @@ fetch_ip_details() {
     response=$(curl -s "$url")
 
     if [ $? -eq 0 ]; then
-        echo "$response" | jq -r 'to_entries | map("\(.key): \(.value)")[]'
+        # Fetching IP details
+        details=$(echo "$response" | jq -r 'to_entries | map("\(.key): \(.value)")[]')
+        # Highlighting 'ISP' and its details in orange and others in cyan
+        highlighted_details=$(echo "$details" | sed -e 's/ISP: /\\033[38;5;208m&\\033[0m/g' | sed -e 's/\bISP\b/\\033[38;5;208m&\\033[0m/g' | sed -e 's/\b\(.*\): /\1: \\033[36m/g')
+        echo -e "$highlighted_details"
     else
-        echo "Failed to fetch IP details. Please check the IP address and try again."
+        echo -e "\033[91mFailed to fetch IP details. Please check the IP address and try again.\033[0m"  # Red color for error message
     fi
 }
 
