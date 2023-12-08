@@ -8,10 +8,10 @@ def fetch_ip_details(ip_address):
     if response.status_code == 200:
         ip_details = response.json()
         for key, value in ip_details.items():
-            if key == 'status':  # Checking for specific details like 'status'
-                print(f"[orange1]{key}[/orange1]: [cyan]{value}[/cyan]")  # Displaying 'status' in orange and its value in cyan
+            if key in ['status']:  # Checking for specific details like 'status'
+                print(f"[orange3]{key}[/orange3]: [cyan]{value}[/cyan]")  # Displaying 'status' and its value in cyan
             else:
-                print(f"[cyan]{key}[/cyan]: [cyan]{value}[/cyan]")  # Displaying all other details in cyan
+                print(f"[orange3]{key}[/orange3]: [cyan]{value}[/cyan]")  # Displaying other placeholders and their values in cyan
     else:
         print("[red]Failed to fetch IP details. Please check the IP address and try again.[/red]")  # Error message in red
 
@@ -29,4 +29,3 @@ print(
 # Get user input for the IP address (in ANSI light green)
 ip = input("\033[92;1mEnter the IP address: \033[0m")
 fetch_ip_details(ip)
-                      
