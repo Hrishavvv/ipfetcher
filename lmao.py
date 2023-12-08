@@ -9,9 +9,9 @@ def fetch_ip_details(ip_address):
         ip_details = response.json()
         for key, value in ip_details.items():
             if key in ['status']:  # Checking for specific details like 'status'
-                print(f"[orange3]{key}[/orange3]: [cyan]{value}[/cyan]")  # Displaying 'status' and its value in cyan
+                print(f"[orange1]{key}[/orange1]: [cyan3]{value}[/cyan3]")  # Displaying 'status' and its value in brighter orange and cyan
             else:
-                print(f"[orange3]{key}[/orange3]: [cyan]{value}[/cyan]")  # Displaying other placeholders and their values in cyan
+                print(f"[orange1]{key}[/orange1]: [cyan3]{value}[/cyan3]")  # Displaying other placeholders and their values in brighter orange and cyan
     else:
         print("[red]Failed to fetch IP details. Please check the IP address and try again.[/red]")  # Error message in red
 
