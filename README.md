@@ -8,6 +8,9 @@ An IP fetcher written in
 
 ```cd ipfetcher```
 
+```chmod +x *```
+
 ```pip install -r requirements.txt```
 
-```python3 lmao.py```
+```python3 lmao.py``` OR 
+```lmao.sh```
