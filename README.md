@@ -1,7 +1,7 @@
 # LMAO.exe
 An IP fetcher written in Python
 
-```https://github.com/hrishavvv/ipfetcher.git/```
+```git clone https://github.com/hrishavvv/ipfetcher.git/```
 
 ```pip install -r requirements.txt```
 
