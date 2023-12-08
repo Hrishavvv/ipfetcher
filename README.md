@@ -7,10 +7,7 @@ An IP fetcher written in
 ```git clone https://github.com/hrishavvv/ipfetcher.git/```
 
 ```cd ipfetcher```
-
-```chmod +x *```
-
 ```pip install -r requirements.txt```
-
+```chmod +x *```
 ```python3 lmao.py``` OR 
 ```lmao.sh```
